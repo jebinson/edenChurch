@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Eden Church - Chords list</title>
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport"><!-- <base href="/"> -->
+	<link href="data:;base64,iVBORw0KGgo=" rel="icon">
+	<link href="./css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="./css/style.css" rel="stylesheet" type="text/css">
+	<link href="./css/myAngularPG.css" rel="stylesheet" type="text/css">
+	<script src="./scripts/libs/jquery.min.js" type="text/javascript">
+	</script>
+	<script src="./scripts/libs/bootstrap.min.js" type="text/javascript">
+	</script>
+	<script src="./scripts/libs/angular.min.js" type="text/javascript">
+	</script>
+</head>
+
+<body>
+
+	<header>
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#">Eden Church</a>
+				</div>
+				<ul class="nav navbar-nav navbar-right">
+					<li>
+						<a href=".">Home</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+
+	<div class="container" ng-app="EdenApp">
+		<div ng-controller="homeController as vm">
+
+			<!-- Modal -->
+			<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							<h4 class="modal-title" id="myModalLabel">{{vm.data.songID}} - {{vm.data.songTitle}}</h4>
+						</div>
+						<div class="modal-body" ng-include="vm.data.tempUrl">
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="form-group col-xs-3" id="search-panel">
+					<div data-spy="affix" data-offset-top="50">
+						<h3 class="control-label" for="focusedInput">Search songs...</h3>
+						<input class="form-control" id="focusedInput" type="text" placeholder="song id, title, composer, chords" ng-model="vm.data.search">
+						<h3>{{vm.data.tempUrl}}</h3>
+						<!-- Button trigger modal -->
+						<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+							Launch demo modal
+						</button>
+					</div>
+				</div>
+				<div id="songList" class="col-xs-9">
+					<h3>Songs Index</h3>
+					<div id="songs" ng-repeat="song in vm.songsData | orderBy: 'songID' | filter: vm.data.search">
+						<p ng-click="vm.loadTemplate(song.songID, song.songdat)"><strong>{{song.songID}}</strong>. {{song.songdat}}</p>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<script src="./scripts/app.js" type="text/javascript">
+	</script> 
+	<script src="./scripts/services/api.js" type="text/javascript">
+	</script> 
+	<script src="./scripts/controllers/homeController.js" type="text/javascript">
+	</script> 
+</body>
+
+</html>

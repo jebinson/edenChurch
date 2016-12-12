@@ -1,0 +1,486 @@
+@import url( 'bootstrap.min.css ');
+@import url( 'styles/loading-bar.css ');
+@import url( 'styles/zebra_pagination.css ');
+@import url( 'styles/jtab-helper.css ');
+/*
+Theme Name: Churchspot.com
+Theme URI: http://Churchspot.com
+Author: Churchspot.com
+Author URI: http://Churchspot.com
+Description: Churchspot.com
+License: GNU General Public License
+@import url(//fonts.googleapis.com/earlyaccess/notosanstamil.css);
+-------------------------------------------------------------- */
+body {
+font-family: "Arial ",sans-serif;
+font-size:16px;
+margin:0px;
+padding:0px;
+}
+.songpre {
+padding:0px 5px 0px 10px;
+}
+
+.lyricline {
+font-family: "Courier New ",Courier,monospace !important;
+padding:0px 0px !important;
+line-height:30px !important;
+margin:0px 0px !important;
+color:#333 !important;
+font-size:110%;
+background-color:#fff !important;
+display:block;
+overflow: visible;
+    white-space: pre;
+}
+
+.chordline {
+white-space:pre;
+font-family: "Courier New ",Courier,monospace !important;
+line-height:0px;
+margin-top:20px;
+display:block;
+margin-bottom:5px;
+overflow: visible;
+}
+
+
+.chordline b {
+font-size:120%;
+}
+.blankline {
+    height: 20px;
+    display: block;
+}
+.transclass {
+text-align:left;
+width:auto !important;
+height:35px !important;
+padding:5px 10px;
+display:inline;
+font-size:120%;
+}
+
+.entrybody {
+border:1px dashed #999;
+background-color:#fafafa;
+}
+
+header {
+height:75px;
+}
+
+.singlehead {
+margin-top:-20px;
+}
+
+.row-centered {
+text-align:center;
+}
+
+.col-centered {
+float:none;
+margin:0 auto;
+}
+
+.form-control {
+margin:8px 0;
+}
+
+input.ssubmit {
+background-color:#089de3;
+color:#fff;
+}
+
+.hide {
+display:none;
+}
+
+.show {
+display:block;
+}
+
+.more,.more:hover,.mor:active {
+float:right;
+font-size:130%;
+padding:0px;
+margin:0px;
+text-decoration:none;
+padding-right:7px;
+margin-top:-12px;
+color:#666;
+}
+
+samp.song_title span {
+background-color:#fff !important;
+border:none !important;
+font-size:150% !important;
+padding:0px;
+color:#333 !important;
+font-weight:bold !important;
+display:block;
+}
+
+.song_title a {
+    background-color: #fff !important;
+    border: none !important;
+    font-size: 150% !important;
+    padding: 0px;
+    line-height: 12px;
+    display: block;
+    padding-bottom: 0px;
+    line-height: 19px;
+}
+ul.songlist li {
+margin:10px 0px;
+font-size:80%;
+font-weight:normal;
+}
+
+ul.songlist li span.date {
+font-size:105%;
+font-weight:normal;
+}
+
+select.langseltop {
+width:auto !important;
+font-size:100%;;
+padding:5px 11px;
+height:35px !important;
+display:inline;
+}
+
+.notice {
+display:block;
+margin:0 auto;
+width:260px;
+height:20px;
+text-align:center;
+color:#007f00;
+}
+
+.topcont {
+min-height:530px;
+}
+
+.songlist {
+min-height:330px;
+}
+
+.site-info {
+text-align:center;
+}
+
+h3#comments {
+display:none;
+}
+
+ol.commentlist li {
+list-style:none;
+}
+
+footer.site-footer {
+margin-top:20px;
+}
+
+.sereshead {
+clear:both;
+font-style:italic;
+margin:10px 0;
+}
+
+.sidebar {
+padding-top:20px;;
+}
+
+.brand {
+width:auto;
+float:left;
+}
+
+.menu-topnav-container {
+float:right;
+margin-right:52px;
+}
+
+ul#menu-topnav {
+list-style:none;
+width:273px;
+}
+
+li.menu-item {
+float:left;
+display:block;
+padding:20px;
+font-size:19px;
+}
+
+li.menu-item a,li.menu-item a:hover,li.menu-item a:active {
+font-weight:normal;
+color:#333;
+text-decoration:none;
+}
+
+.chordcont {
+background-color:#fff;
+position:absolute;
+}
+
+.entrybody {
+position:relative;
+}
+
+.songpre b {
+color:#000080;
+cursor:pointer;
+cursor:hand;
+}
+
+.slicknav_menu {
+display:none
+}
+
+.fpbanner {
+width:100%;
+text-align:center;
+margin:0 auto;
+float:none;
+}
+
+.nocomments {
+display:none;
+}
+
+.alsoby {
+margin-bottom:20px;
+}
+
+ul.scroller {
+position:fixed;
+bottom:0;
+left:10px;
+list-style-type:none;
+padding:0;
+z-index:100;
+}
+
+ul.speeds {
+padding-left:0;
+display:none;
+list-style-type:none;float: right;
+}
+
+ul.scroller li {
+text-align:center;
+font-family: 'Lato ',sans-serif;
+margin-right:10%;
+}
+
+ul.scroller li img {
+height:50px;
+width:50px;
+}
+
+ul.scroller li:hover {
+background:rgba(255,255,255,0);
+cursor:pointer;
+border-radius:20px;
+margin-right:10%;
+}
+
+.scroller li {
+padding:5px;
+color:black;
+position:relative;
+}
+ 
+.modal-header .close {
+    color: #333 !important;
+    top: -16px !important;
+    right: -12px !important;
+}
+a.sButton {
+    background-color: #23527c;
+    padding: 3px;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 100%;
+}
+#incfont, #decfont{
+background-color: #D4AF37;
+    padding: 4px 20px;
+    font-size: 100%;
+    border-radius: 5px;
+color:black;
+}
+a.chshowhide
+{
+    background-color:#BD2031;
+}
+a, a:hover, a:active, a:visited
+{
+    text-decoration: none !important;
+ }
+ span.createppt
+ {
+    background-color:#006600;
+    padding: 3px;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 100%;
+    cursor: pointer;
+    cursor:hand;
+ }
+ .playbut
+ {
+    height:18px;
+    float:left;
+    padding:0px 5px 0px 0px;
+ }
+/*****************************************************/
+/*****************************************************/
+/*****************************************************/
+/*****************************************************/
+@media (max-width:799px) {
+body {
+font-size:12px;
+}
+
+header {
+height:60px;
+margin-top:20px;
+}
+.appead
+{
+    background-color: #d4d4d4;
+    text-align:right;
+    width:100%;
+    margin-bottom:10px;
+    position:fixed;
+    top:0px;
+    left:0px;
+    z-index: 100;
+    height:40px;
+}
+.appead img
+{
+    width:33%;
+    text-align:right;
+}
+.singhead
+{
+       margin-top: 0px;
+    padding-right: 10px;
+    padding-top: 3px;
+margin-top:0px;
+}
+.singlediv
+{
+   margin-top:20px; 
+}
+
+.entrybody {
+margin-top:-16px;
+}
+
+h2 {
+margin-top:0px;
+}
+
+.like,.fpbanner,.sidebar,.author-box,.menu-topnav-container,.fpbanner {
+display:none !important;
+visibility:hidden;
+height:0px;
+}
+
+.brand img {
+width:145px;
+}
+
+.col-md-8 {
+padding:0px;
+}
+
+.container {
+    padding: 0px;
+    margin: -20px 5px 5px 5px;
+    width: 98% !important;
+       overflow: hidden;
+}
+
+.transclass {
+height:27px !important;
+padding:2px 5px;
+font-size:104%;
+}
+
+.entrybody {
+border:none;
+background-color:#fff;
+}
+
+.songpre {
+padding:0px 5px 0px 10px;
+    margin-top: 20px;
+}
+
+span.chordline {
+    white-space: pre;
+    font-family: "Courier New ",Courier,monospace !important;
+    line-height: 0px;
+    margin-top: 2px;
+    display: block;
+    margin-bottom: 0px;
+}
+span.chordline b {
+font-size:110%;
+}
+.songlist {
+padding:0px 20px;
+}
+samp.blankline {
+    height: 20px;
+    display: block;
+}
+select.langseltop {
+width:auto !important;
+height:38px;
+padding:5px 10px;
+display:inline;
+margin:10px 0px 0px 10px;
+}
+
+ul.scroller {
+position:fixed;
+bottom:0;
+right:2px;
+list-style-type:none;
+padding:0;
+z-index:100;
+}
+ul.scroller {
+    left: auto;
+}
+ul.scroller li img {
+height:50px;
+width:50px;
+}
+
+ul.scroller li {
+text-align:right;
+font-family: 'Lato ',sans-serif;
+margin-right:0%;
+}
+
+ul.scroller li:hover {
+background:rgba(255,255,255,0);
+cursor:pointer;
+border-radius:20px;
+margin-right:0%;
+}
+.colorbox1
+{
+    display:none !important;
+}
+}
+ 

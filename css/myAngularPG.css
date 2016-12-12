@@ -1,0 +1,29 @@
+html {
+	position: relative;
+	min-height: 100%;
+}
+body {
+	margin-bottom: 50px;
+	background: url("../images/blurred-background.jpg") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	color: black;
+}
+
+input{
+	width: 100%;
+}
+
+#songs{
+	cursor: pointer; cursor: hand; 
+	padding: 1px;
+	vertical-align: middle;
+}
+
+#songs:hover{
+	background: rgb(204, 204, 204); /* Fallback for older browsers without RGBA-support */
+	background: rgba(204, 204, 204, 0.3);
+	filter: alpha(opacity=30); /* For IE8 and earlier */
+}
